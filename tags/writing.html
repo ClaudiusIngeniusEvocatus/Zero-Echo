@@ -1,0 +1,29 @@
+---
+layout: default
+title: Writing
+---
+
+<div class="homepage-layout">
+  <div class="homepage-main">
+    <h1>Writing</h1>
+
+    <div class="posts">
+
+  {% for post in site.tags["Writing"] %}
+         <article class="post">
+
+          <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+          <div class="entry">
+            {{ post.excerpt }}
+          </div>
+
+          {{ post.date | date_to_long_string }} | <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        </article>
+  {% endfor %}
+
+    </div>
+  </div>
+
+  {% include sidebar.html %}
+</div>
