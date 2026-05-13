@@ -1,29 +1,26 @@
 ---
 layout: default
-title: Research
+title: "Scenarios & Wargaming"
+permalink: /tags/scenarios-wargaming/
 ---
-
 <div class="homepage-layout">
   <div class="homepage-main">
-    <h1>Research</h1>
-
+    <h1>Scenarios & Wargaming</h1>
     <div class="posts">
-
-  {% for post in site.tags["Research"] %}
+  {% for post in site.tags["Scenarios & Wargaming"] %}
          <article class="post">
-
           <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
           <div class="entry">
             {{ post.excerpt }}
           </div>
-
           {{ post.date | date_to_long_string }} | <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
         </article>
   {% endfor %}
-
+  {% assign tag_posts = site.tags["Scenarios & Wargaming"] %}
+  {% if tag_posts == nil or tag_posts.size == 0 %}
+    <p><em>No posts under this tag yet.</em></p>
+  {% endif %}
     </div>
   </div>
-
   {% include sidebar.html %}
 </div>

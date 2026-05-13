@@ -1,32 +1,26 @@
 ---
 layout: default
-title: "2024"
+title: "Contingency"
+permalink: /tags/contingency/
 ---
-
 <div class="homepage-layout">
   <div class="homepage-main">
-    <h1>2024</h1>
-
+    <h1>Contingency</h1>
     <div class="posts">
-
-  {% for post in site.posts %}
-    {% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-    {% if post_year == "2024" %}
+  {% for post in site.tags["Contingency"] %}
          <article class="post">
-
           <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
           <div class="entry">
             {{ post.excerpt }}
           </div>
-
           {{ post.date | date_to_long_string }} | <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
         </article>
-    {% endif %}
   {% endfor %}
-
+  {% assign tag_posts = site.tags["Contingency"] %}
+  {% if tag_posts == nil or tag_posts.size == 0 %}
+    <p><em>No posts under this tag yet.</em></p>
+  {% endif %}
     </div>
   </div>
-
   {% include sidebar.html %}
 </div>

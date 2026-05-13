@@ -1,6 +1,6 @@
 <aside class="homepage-sidebar">
   <h4>Content by Topic</h4>
-  {% assign defined_tags = "Artificial Intelligence,Books,Conferences,Data,Games,Journalism,Presentations,Publishing,Reflections,Research,Scenario Planning,Strategy,Writing" | split: "," %}
+  {% assign defined_tags = "Strategy,Decisions,Mission Command,Teams,Scenarios & Wargaming,Contingency,AI & Cognition,Reading Notes" | split: "," %}
   {% for tag_name in defined_tags %}
     {% assign tag_posts = site.tags[tag_name] %}
     {% if tag_posts %}
@@ -10,8 +10,9 @@
     {% endif %}
   {% endfor %}
 
+  {% if site.posts.size > 0 %}
   <h4>Content by Year</h4>
-  {% assign defined_years = "2026,2025,2024,2023,2022,2021,2020" | split: "," %}
+  {% assign defined_years = "2026" | split: "," %}
   {% for year in defined_years %}
     {% assign year_count = 0 %}
     {% for post in site.posts %}
@@ -22,6 +23,7 @@
     {% endfor %}
     <a href="{{ site.baseurl }}/years/{{ year }}/">{{ year }} ({{ year_count }})</a><br/>
   {% endfor %}
+  {% endif %}
 
   {% include writing-stats.html %}
 </aside>
