@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 //
 // VARIABLES
 //
@@ -15,9 +15,12 @@ $lightGray: #eee;
 $white: #fff;
 
 // Font stacks
-$playfair: "Playfair Display", serif;
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$playfair: "Playfair Display", serif;  // headings — review pairing with Vollkorn body
+$vollkorn: "Vollkorn", Georgia, "Times New Roman", serif;
+// Body-font aliases now point at Vollkorn (was Helvetica). Existing references
+// across the SCSS files pick up the new font automatically.
+$helvetica: $vollkorn;
+$helveticaNeue: $vollkorn;
 
 // Mobile breakpoints
 @mixin mobile {
