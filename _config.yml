@@ -64,9 +64,8 @@ exclude:
 paginate: 8
 paginate_path: "/posts/page:num/"
 
-# Defaults — OG image will be added later when we have a Zero Echo asset
-# defaults:
-#   - scope:
-#       path: ""
-#     values:
-       image: /images/og-default.png
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/og-default.png
