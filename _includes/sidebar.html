@@ -1,6 +1,6 @@
 <aside class="homepage-sidebar">
   <h4>Content by Topic</h4>
-  {% assign defined_tags = "Strategy,Decisions,Mission Command,Teams,Scenarios & Wargaming,Contingency,AI & Cognition,Reading Notes" | split: "," %}
+  {% assign defined_tags = "Strategy,Decisions,Mission Command,Teams,Pedagogy,Vocation & Craft,Scenarios & Wargaming,Simulation Technology,Contingency,Evolving Enterprise,AI & Cognition,Reading Notes" | split: "," %}
   {% for tag_name in defined_tags %}
     {% assign tag_posts = site.tags[tag_name] %}
     {% if tag_posts %}

@@ -2,7 +2,7 @@
 layout: post
 title: "Making room to develop wargamers"
 date: 2026-05-20
-tags: ["Scenarios & Wargaming"]
+tags: ["Evolving Enterprise", "Vocation & Craft"]
 ---
 
 I took a call last week from a recruiter. He'd mentioned to a mutual connection that he was looking for a "wargaming specialist", and my name popped up. We chatted a bit at the start of the call, with the usual preamble about [Evocatus](https://www.evocatus.co.uk/consulting/), our backstory and our base here on [Dorset Innovation Park](https://dorsetinnovationpark.co.uk/). He talked about how he'd recently moved across from recruiting for technical staff to a defence-focused role and how invested his company is in supporting the people within the sector.
