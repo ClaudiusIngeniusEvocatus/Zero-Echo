@@ -1,0 +1,30 @@
+---
+layout: default
+title: "2026"
+permalink: /years/2026/
+---
+<div class="homepage-layout">
+  <div class="homepage-main">
+    <h1>2026</h1>
+    <div class="posts">
+  {% assign year_count = 0 %}
+  {% for post in site.posts %}
+    {% capture post_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% if post_year == "2026" %}
+      {% assign year_count = year_count | plus: 1 %}
+         <article class="post">
+          <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+          <div class="entry">
+            {{ post.excerpt }}
+          </div>
+          {{ post.date | date_to_long_string }} | <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        </article>
+    {% endif %}
+  {% endfor %}
+  {% if year_count == 0 %}
+    <p><em>No posts from this year yet.</em></p>
+  {% endif %}
+    </div>
+  </div>
+  {% include sidebar.html %}
+</div>
